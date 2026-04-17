@@ -1,0 +1,48 @@
+{
+  "name": "csharp-markdown-formatter",
+  "displayName": "C# Markdown Code Block Formatter",
+  "description": "Formats C# fenced code blocks in Markdown files",
+  "version": "0.1.0",
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Formatters"],
+  "activationEvents": ["onLanguage:markdown"],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "C# Markdown Formatter",
+      "properties": {
+        "csharpMarkdown.indentStyle": {
+          "type": "string",
+          "enum": ["tabs", "spaces"],
+          "enumDescriptions": [
+            "Indent with tab characters",
+            "Indent with spaces"
+          ],
+          "default": "tabs",
+          "description": "Indentation style used when formatting C# code blocks in Markdown."
+        },
+        "csharpMarkdown.indentSize": {
+          "type": "number",
+          "default": 4,
+          "minimum": 1,
+          "maximum": 8,
+          "description": "Number of spaces per indent level (only used when indentStyle is 'spaces')."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "csharpMarkdown.formatBlock",
+        "title": "Format C# Code Block"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "csharpMarkdown.formatBlock",
+        "key": "ctrl+shift+alt+f",
+        "mac": "cmd+shift+alt+f",
+        "when": "editorLangId == markdown"
+      }
+    ]
+  }
+}
