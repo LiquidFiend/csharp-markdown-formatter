@@ -1,10 +1,22 @@
 {
   "name": "csharp-markdown-formatter",
   "displayName": "C# Markdown Code Block Formatter",
-  "description": "Formats C# fenced code blocks in Markdown files",
-  "version": "0.1.0",
+  "description": "Formats C# fenced code blocks in Markdown files. Place your cursor inside a ```csharp block and press Ctrl+Shift+Alt+F.",
+  "version": "1.0.0",
+  "publisher": "liquidfiend",
   "engines": { "vscode": "^1.75.0" },
   "categories": ["Formatters"],
+  "keywords": ["csharp", "c#", "markdown", "formatter", "code block", "fenced"],
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiquidFiend/csharp-markdown-formatter"
+  },
+  "bugs": {
+    "url": "https://github.com/LiquidFiend/csharp-markdown-formatter/issues"
+  },
+  "homepage": "https://github.com/LiquidFiend/csharp-markdown-formatter#readme",
   "activationEvents": ["onLanguage:markdown"],
   "main": "./extension.js",
   "contributes": {
